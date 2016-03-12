@@ -1,0 +1,18 @@
+{% macro recipe(ingredients) %}
+  <table>
+    <thead>
+      <th>Amount</th>
+      <th>Measurement</th>
+      <th>Ingredient</th>
+    </thead>
+    <tbody>
+      {% for ingredient in ingredients %}
+      <tr itemprop="recipeIngredient">
+        <td>{{ingredient.amount}}</td>
+        <td>{{ingredient.measurement}}</td>
+        <td>{{ingredient.name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endmacro %}

@@ -1,0 +1,61 @@
+{% extends '_index.html' %}
+
+{% import 'macros/_published.html' as pubMacro %}
+
+{% block body %}
+  <div class="_blog">
+    <main class="_blog--article">
+      <article class="article" itemscope itemtype="http://schema.org/Recipe">
+        <header class="article--{% if page %}{{ page }}-{% endif %}heading">
+          <h1 class="article--title" itemprop="name">{{ title }}</h1>
+        </header>
+        <div class="article--content">
+          <img src="{{image}}" alt="" itemprop="image">
+          <section itemprop="text">
+            {% block content %}{% endblock %}
+          </section>
+
+
+          <hr>
+
+          <section class="recipe">
+            <div class="recipe--prep">Prep Time: <meta itemprop="prepTime" content="PT{{prep}}">{{prep}}</div>
+            <div class="recipe--cook">Cook Time: <meta itemprop="cookTime" content="PT{{cook}}">{{cook}}</div>
+            <div class="recipe--yield">Yield: <span itemprop="recipeYield">{{servings}}</span></div>
+
+            {# Ingredient List #}
+            <table class="recipe--ingredients">
+              <thead>
+                <th>Amount</th>
+                <th>Measurement</th>
+                <th>Ingredient</th>
+              </thead>
+              <tbody>
+                {% for ingredient in ingredients %}
+                <tr itemprop="recipeIngredient">
+                  <td>{{ingredient.amount}}</td>
+                  <td>{{ingredient.measurement}}</td>
+                  <td>{{ingredient.name}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+            <div class="recipe--instructions" itemprop="recipeInstructions">
+              <ol>
+                {% for step in steps %}
+                <li>{{step}}</li>
+                {% endfor %}
+              </ol>
+            </div>
+          </section>
+        </div>
+        {% if published and not hidePublished and not draft %}
+          {{ pubMacro.published(published, updated, stats.birthtime, 'article') }}
+        {% endif %}
+      </article>
+    </main>
+
+    {% include 'macros/_footer.html' %}
+  </div>
+{% endblock %}

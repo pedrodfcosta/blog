@@ -1,0 +1,34 @@
+---
+title: Recipes
+listing:
+  folders:
+    - recipes
+  sort: published
+  reverse: true
+  ignore:
+    - attribute: draft
+      value: true
+      operator: is
+    - attribute: page
+      value: recipes
+      operator: is
+page: recipes
+hidePublished: true
+---
+{% extends '_layout.html' %}
+
+{% import 'macros/_display.html' as display %}
+
+{% block content %}
+
+<section class="posts">
+  <ul class="posts--list">
+  {% for post in listing.recipes %}
+    {% if post.published|date('yyyy') == today|date('yyyy') %}
+    {{ display.post(post) }}
+    {% endif %}
+  {% endfor %}
+  </ul>
+</section>
+
+{% endblock %}
