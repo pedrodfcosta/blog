@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Progressive Enhancement Code Pattern Using Sass and Modernizr | Snugug</title><link rel="icon" href="/images/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google-site-verification" content="zIeV2B7zZKCtEFP-6vV8rKk0ocpbp035v_g3IRn12Jo"><script src="/js/main.js" defer="defer"></script><style type="text/css">article,body,div,h1,header,html,main{background:0 0;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{line-height:1}article,header,main{display:block}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}:root{font-size:125%;font-family:aller,'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif}body{background:#f8f7f2;color:#2c2a21;text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";font-feature-settings:"liga","dlig";font-weight:400}body *+*{margin-top:1rem}.article--heading{width:100vw;padding:2rem;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;z-index:-1}.article--heading{background-color:#c20030;background:linear-gradient(0deg,rgba(194,0,48,0) 10%,rgba(194,0,48,.05) 10%,rgba(194,0,48,.05) 20%,rgba(194,0,48,.1) 20%,rgba(194,0,48,.1) 30%,rgba(194,0,48,.15) 30%,rgba(194,0,48,.15) 40%,rgba(194,0,48,.2) 40%,rgba(194,0,48,.2) 50%,rgba(194,0,48,.3) 50%,rgba(194,0,48,.3) 60%,rgba(194,0,48,.4) 60%,rgba(194,0,48,.4) 70%,rgba(194,0,48,.5) 70%,rgba(194,0,48,.5) 80%,rgba(194,0,48,.6) 80%,rgba(194,0,48,.6) 90%,rgba(194,0,48,.8) 90%),linear-gradient(-90deg,rgba(194,0,48,0) 10%,rgba(194,0,48,.05) 10%,rgba(194,0,48,.05) 20%,rgba(194,0,48,.1) 20%,rgba(194,0,48,.1) 30%,rgba(194,0,48,.15) 30%,rgba(194,0,48,.15) 40%,rgba(194,0,48,.2) 40%,rgba(194,0,48,.2) 50%,rgba(194,0,48,.3) 50%,rgba(194,0,48,.3) 60%,rgba(194,0,48,.4) 60%,rgba(194,0,48,.4) 70%,rgba(194,0,48,.5) 70%,rgba(194,0,48,.5) 80%,rgba(194,0,48,.6) 80%,rgba(194,0,48,.6) 90%,rgba(194,0,48,.8) 90%),#da9400;min-height:100vh}.article--title{text-shadow:0 -.005em #111,-.005em 0 #282727,-.005em -.01em #111,-.01em -.005em #282727,-.01em -.015em #111,-.015em -.01em #282727,-.015em -.02em #111,-.02em -.015em #282727,-.02em -.025em #111,-.025em -.02em #282727,-.025em -.03em #111,-.03em -.025em #282727,-.03em -.035em #111,-.035em -.03em #282727,-.035em -.04em #111,-.04em -.035em #282727,-.04em -.045em #111,-.045em -.04em #282727,-.045em -.05em #111,-.05em -.045em #282727,-.05em -.055em #111,-.055em -.05em #282727,-.055em -.06em #111,-.06em -.055em #282727,-.06em -.065em #111,-.065em -.06em #282727,-.065em -.07em #111,-.07em -.065em #282727,-.07em -.075em #111,-.075em -.07em #282727;-webkit-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";font-feature-settings:"liga","dlig";color:#f8f7f2;font-size:2rem;font-weight:700;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto;line-height:1.2;margin-right:0;margin:0 auto;max-width:100%;text-align:right;text-rendering:optimizeLegibility;word-wrap:break-word}@media (min-width:860px){.article--title{font-size:6vw;margin-right:calc(10% - 2rem);max-width:80%}}._blog{margin-top:0}@supports (display:flex){._blog{display:-ms-flexbox;display:flex;min-height:100vh;-ms-flex-direction:column;flex-direction:column}}@supports (display:flex){._blog--article{-ms-flex:1;flex:1}}</style><link rel="preload" href="/css/style.css" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/style.css"></noscript><script>!function(u){"use strict";var e=function(e,t,n){var r,o=u.document,a=o.createElement("link");if(t)r=t;else{var l=(o.body||o.getElementsByTagName("head")[0]).childNodes;r=l[l.length-1]}var i=o.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(o.body)return t();setTimeout(function(){e(t)})}(function(){r.parentNode.insertBefore(a,t?r:r.nextSibling)});var d=function(e){for(var t=a.href,n=i.length;n--;)if(i[n].href===t)return e();setTimeout(function(){d(e)})};function s(){a.addEventListener&&a.removeEventListener("load",s),a.media=n||"all"}return a.addEventListener&&a.addEventListener("load",s),(a.onloadcssdefined=d)(s),a};"undefined"!=typeof exports?exports.loadCSS=e:u.loadCSS=e}("undefined"!=typeof global?global:this),function(r){if(r.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return r.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=r.document.getElementsByTagName("link"),t=0;t<e.length;t++){var n=e[t];"preload"===n.rel&&"style"===n.getAttribute("as")&&(r.loadCSS(n.href,n,n.getAttribute("media")),n.rel=null)}},!e.support()){e.poly();var t=r.setInterval(e.poly,300);r.addEventListener&&r.addEventListener("load",function(){e.poly(),r.clearInterval(t)}),r.attachEvent&&r.attachEvent("onload",function(){r.clearInterval(t)})}}}(this);</script><script id="font-load">(function () {
+      'use strict';
+
+      var fontURL = '/css/fonts.css?bust=342918',
+          fonts,
+          req,
+          style,
+          fontUrlLS;
+
+      window.domCL = false;
+
+      window.addEventListener('DOMContentLoaded', function () {
+        window.domCL = true;
+      });
+
+      if (window.localStorage && document.querySelector && window.XMLHttpRequest) {
+        fonts = localStorage.getItem('fonts');
+        fontUrlLS = localStorage.getItem('fontURL');
+
+        if (fonts && fontUrlLS === fontURL) {
+          req = document.querySelector('#font-load');
+
+          style = window.document.createElement('style');
+          style.innerHTML = fonts;
+
+          req.parentNode.insertBefore(style, req.nextSibling);
+        }
+        else {
+          window.addEventListener('load', function () {
+            req = new XMLHttpRequest();
+            req.open('GET', fontURL);
+            req.onreadystatechange = function () {
+              localStorage.setItem('fonts', req.responseText);
+              localStorage.setItem('fontURL', fontURL);
+            }
+            req.send();
+          });
+        }
+      }
+    })();</script></head><body><div class="_blog"><main class="_blog--article" itemscope="" itemtype="http://schema.org/Blog"><article class="article"><header class="article--heading"><h1 class="article--title" itemprop="name">Progressive Enhancement Code Pattern Using Sass and Modernizr</h1></header><div class="article--content base" itemprop="text"><p>Designing your websites in a <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressive way</a> is one of the best and easiest ways to ensure that a user coming to your site, no matter the way they access it, is going to be able to use your website. It's essential for everything on the web from accessibility to responsive web design, and doing it properly, <em>id est</em> through feature detection with JavaScript and CSS enhancements instead of through <a href="http://css-tricks.com/browser-detection-is-bad/">browser detection</a> and UA targeted source files, will not only save you maintenance headaches when future devices come out, but may <a href="http://wtfmobileweb.com/">save you some embarrassment as well</a>. Enter my two favorite Front End tools: <a href="http://sass-lang.com">Sass</a>+<a href="http://compass-style.org">Compass</a> and <a href="http://modernizr.com/">Modernizr</a>.</p><p>Sass is a CSS Preprocessing language and Compass is a kickass framework built on top of it. Modernizr is modern feature detection. Both rock, and here's a simple Progressive Enhancement code pattern I've been using leveraging Modernizr's CSS class hooks and Sass nesting.</p><pre class="language-scss"><code class="language-scss"><span class="token comment">////////////////////////</span>
+<span class="token comment">// Sass Input</span>
+<span class="token comment">////////////////////////</span>
+<span class="token selector">.foo </span><span class="token punctuation">{</span>
+  <span class="token comment">/* Properties shared between detected features go here. */</span>
+  <span class="token selector">.feature <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">/* Custom properties if the feature is present. */</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.no-feature <span class="token parent important">&amp;</span>,
+  .no-js <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">/* Default properties if the feature is not present, or JavaScript is disabled and therefore Modernizr didn't fire. */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><pre class="language-scss"><code class="language-scss"><span class="token comment">/*************
+CSS Output
+**************/</span>
+<span class="token selector">.foo </span><span class="token punctuation">{</span>
+  <span class="token comment">/* Properties shared between detected features go here. */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.feature .foo </span><span class="token punctuation">{</span>
+  <span class="token comment">/* Custom properties if the feature is present. */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.no-feature .foo, .no-js .foo </span><span class="token punctuation">{</span>
+  <span class="token comment">/* Default properties if the feature is not present, or JavaScript is disabled and therefore Modernizr didn't fire. */</span>
+<span class="token punctuation">}</span>
+</code></pre><p>What I'm doing in this pattern is defining properties directly underneath <code>.foo</code> that should be applied regardless of if the feature I'm looking for is available (anything from box model to design), then I'm nesting the Modernizr feature detection parent selectors underneath, allowing me to see both my feature-present (<code>.feature &amp;</code>) and feature-absent (<code>.no-feature &amp;</code>) styling in line, making future maintenance easier by leaps and bounds. I include the <code>.no-js &amp;</code> as a comma-separated addition to the feature-absent both because there are some users with JavaScript disabled (and seeing as how Modernizr is a JavaScript based solution, it then won't fire), and because <a href="http://twitter.com/zeldman/status/215088145971159042">all of your users are non-JS while they're downloading your JS</a>. Neat, but what about in practice? Let's throw Compass into the mix and reinvent the replace-text wheel.</p><pre class="language-scss"><code class="language-scss"><span class="token comment">// Compass Image Sprites for our PNGs</span>
+<span class="token keyword">@import</span> <span class="token string">'social/*.png'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Twitter Class!</span>
+<span class="token selector">.twitter </span><span class="token punctuation">{</span>
+  <span class="token comment">// Put the height/width of the image in</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">image-height</span><span class="token punctuation">(</span><span class="token string">'social/twitter.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">image-width</span><span class="token punctuation">(</span><span class="token string">'social/twitter.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// Hide text. Use squish-text() if the element is inline</span>
+  <span class="token keyword">@include</span> <span class="token function">hide-text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// No repeating backgrounds, please.</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token comment">// SVG</span>
+  <span class="token selector">.svg <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">// Inline the SVG so that advanced browsers and future tech doesn't need the extra HTTP requests for the SVG</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">inline-image</span><span class="token punctuation">(</span><span class="token string">'social/twitter.svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Background size only needed if the SVG is larger than the PNG. </span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token function">image-width</span><span class="token punctuation">(</span><span class="token string">'social/twitter.png'</span><span class="token punctuation">)</span> <span class="token function">image-height</span><span class="token punctuation">(</span><span class="token string">'social/twitter.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// Default</span>
+  <span class="token selector">.no-svg <span class="token parent important">&amp;</span>,
+  .no-js <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">// Call the Sprite'd image's position.</span>
+    <span class="token keyword">@include</span> <span class="token function">social-sprite</span><span class="token punctuation">(</span>twitter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>So what exactly is all of that? We're going to combine the power of Compass image sprites, dimension helpers, and inlining capabilities to build a future friendly image replacement complete with progressive enhancement up to SVG to make our image replacement resolution independent (yay!). First step is first, we import our Social png icons to create a <a href="http://compass-style.org/help/tutorials/spriting/">Compass Image Sprite</a>. Yes, this will build a full image sprite from individual images; it rocks. Next, we're going to use the <a href="http://compass-style.org/reference/compass/helpers/image-dimensions/">Compass Image Dimension Helpers</a> to grab the height and width of the PNG image so we don't need to hard code them, making them super dynamic if we choose to change the size of our images later; Compass will handle all of the changes for us in the background. We're then going to grab the hide-text <a href="http://compass-style.org/reference/compass/typography/text/replacement/">Text Replacement Mixin</a> to hide our text. The final piece of our generic styling is to stop our background from repeating, because we don't want that on a text replacement.</p><p>Now onto the fun stuff, the Modernizr powered feature detection. First up, SVG. For it's background-image property, we're going to use the <a href="http://compass-style.org/reference/compass/helpers/inline-data/">Inline Image Data Helper</a> to Base64 Encode our SVG, reducing HTTP requests for modern browsers and caching the image with the CSS at the cost of a slightly larger CSS file (a tradeoff I'm okay with making). If we want, say, if our SVG is of larger dimensions than our PNG, we can write a background-size property and set it to the same dimensions as our PNG to ensure the two stay in lock-step (we could feature detect for background-size, but according to the awesome Caniuse.com, all browsers that <a href="http://caniuse.com/svg">support SVG</a> also <a href="http://caniuse.com/background-img-opts">support unprefixed background-size</a>, and I'm cool with assuming that). Finally, for our no-js and no-svg folks, we include the sprite placement for our icon, thus completing the circle. The net result of all of this? For modern browsers, they make 0 additional HTTP requests for our image replacement (which is resolution independent), get our image replacement cached with the CSS, and shouldn't download the image sprite because none of the sprite selectors apply to anything on page! For older browsers, while they will have slightly larger download sizes for their CSS, that then gets cached and they only need 1 additional HTTP request to grab their icons.</p><p>I can hear you now, though, saying: &quot;Hey Sam, that looks like a lot I've got to write each and every time! Can't you make it easier?&quot; Yes. Yes I can. Presenting the <strong>Progressive Enhancement Text Replace Mixin</strong>.</p><pre class="language-scss"><code class="language-scss"><span class="token comment">////////////////////////</span>
+<span class="token comment">// Progressive Enhancement Text Replace Mixin</span>
+<span class="token comment">//</span>
+<span class="token comment">// - $image-name: Name of the image file without extension. </span>
+<span class="token comment">// - $path-from-images: The path from your images folder where the .png and .svg are stored. They should be stored in the same folder.</span>
+<span class="token comment">// - $sprite-name: The name of the folder your files are stored in in order to name the sprite. See Compass Image Spriting for more info.</span>
+<span class="token comment">// - $inline: Whether or not the parent item is an inline item. If the item is inline, squish-text() needs to be used. Defaults to false.</span>
+<span class="token comment">////////////////////////</span>
+<span class="token keyword">@mixin</span> <span class="token function">replace-text-pe</span><span class="token punctuation">(</span><span class="token variable">$image-name</span>, <span class="token variable">$path-from-images</span>, <span class="token variable">$sprite-name</span>, <span class="token property"><span class="token variable">$inline</span></span><span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Put the height/width of the image in</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">image-height</span><span class="token punctuation">(</span><span class="token string">'#{$path-from-images}/#{$image-name}.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">image-width</span><span class="token punctuation">(</span><span class="token string">'#{$path-from-images}/#{$image-name}.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// Hide text. Use squish-text() if the element is inline</span>
+  <span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$inline</span> </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">squish-text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">@else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">hide-text</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// No repeating backgrounds, please.</span>
+  <span class="token property">background-repeat</span><span class="token punctuation">:</span> no-repeat<span class="token punctuation">;</span>
+  <span class="token comment">// SVG</span>
+  <span class="token selector">.svg <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">// Inline the SVG so that advanced browsers and future tech doesn't need the extra HTTP requests for the SVG</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">inline-image</span><span class="token punctuation">(</span><span class="token string">'#{$path-from-images}/#{$image-name}.svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Background size only needed if the SVG is larger than the PNG. </span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token function">image-width</span><span class="token punctuation">(</span><span class="token string">'#{$path-from-images}/#{$image-name}.png'</span><span class="token punctuation">)</span> <span class="token function">image-height</span><span class="token punctuation">(</span><span class="token string">'#{$path-from-images}/#{$image-name}.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// Default</span>
+  <span class="token selector">.no-svg <span class="token parent important">&amp;</span>,
+  .no-js <span class="token parent important">&amp;</span> </span><span class="token punctuation">{</span>
+    <span class="token comment">// Call the Sprite'd image's position.</span>
+    <span class="token keyword">@include</span> <span class="token variable">#{$sprite-name}</span><span class="token function">-sprite</span><span class="token punctuation">(</span><span class="token variable">#{$image-name}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Hope people find this useful. If there are any bugs in the mixin, let me know and I'll update the mixin here. Happy coding!</p></div><footer class="article--author"><span class="article--published" itemprop="datePublished">Published on <time datetime="2018-07-29">June 25th, 2012</time></span></footer></article></main><footer class="_blog--footer"><div class="footer"><ul class="footer--links"><li class="footer--link-item"><a href="/" class="footer--link">Home</a></li><li class="footer--link-item"><a href="/me/" class="footer--link">Me</a></li><li class="footer--link-item"><a href="/presentations/" class="footer--link">Presentations</a></li><li class="footer--link-item"><a href="/musings/" class="footer--link">Musings</a></li></ul></div></footer></div><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-30577396-1', 'auto');
+    ga('send', 'pageview');</script></body></html>
